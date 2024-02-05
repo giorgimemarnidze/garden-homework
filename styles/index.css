@@ -1,0 +1,803 @@
+/* || General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+
+
+/* || Header */
+
+.page {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    margin: 30px 0;
+    padding: 0 20px;
+}
+
+.header__menu {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-body-copy, #414840);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2.1px;
+    text-transform: uppercase;
+}
+
+.header__rightside {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.header__menu--button {
+    padding: 15px 30px;
+    color: var(--Primary, #475F45);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2.1px;
+    text-transform: uppercase;
+    background-color: unset;
+    cursor: pointer;
+    border: 2px solid var(--Primary, #475F45);
+}
+
+
+@media screen and (max-width:1023px) and (min-width:767px) {
+    .header__menu {
+        display: none;
+    }
+
+    .header__burger--menu {
+        visibility: unset;
+    }
+
+}
+
+@media screen and (min-width: 1023px) {
+    .header__burger--menu {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+    .header__menu {
+        display: none;
+    }
+}
+
+@media screen and (min-width:100px) and (max-width: 390px) {
+    .header__logo {
+        width: 200px;
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
+    .header__menu {
+        font-size: 14px;
+        gap: 25px;
+    }
+
+    .header__logo {
+        width: 220px;
+    }
+
+    .header__menu--button {
+        padding: 7px 5px;
+    }
+}
+
+/* || Main */
+.hero {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 65px 0;
+}
+
+.hero__title {
+    color: var(--Header-text, #343D33);
+    font-family: "Libre Baskerville";
+    font-size: 57px;
+    font-weight: 400;
+    text-transform: capitalize;
+    width: 530px;
+}
+
+.hero__subtitle {
+    color: var(--text-body-copy, #414840);
+    font-family: 'Roboto';
+    font-size: 25px;
+    font-weight: 300;
+    text-transform: capitalize;
+    width: 470px;
+    margin: 15px 0;
+}
+
+.hero__btn {
+    display: flex;
+    gap: 15px;
+}
+
+.hero__btn button {
+    display: flex;
+    padding: 20px 40px;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2.1px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.button__background--green {
+    background-color: #343D33;
+    color: #FFF;
+    border: 1px solid #343D33;
+}
+
+.button__background--white {
+    background-color: #fff;
+    color: #343D33;
+    border: 1px solid #343D33;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
+    .hero__title {
+        font-size: 45px;
+        
+    }
+
+    .hero__subtitle {
+        font-size: 21px;
+    }
+
+    .hero__btn button {
+        padding: 15px;
+    }
+
+    .hero__image {
+        width: 400px;
+    }
+
+    .hero {
+        justify-content: space-around;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width: 1023px) {
+    .hero {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 50px;
+        padding-top: 30px;
+    }
+    .hero__leftside {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 767px) {
+    .hero__image {
+        width: 250px;
+    }
+    .hero {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 50px;
+        padding-top: 30px;
+    }
+    .hero__leftside {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .hero__title {
+        color: var(--Header-text, #343D33);
+        text-align: center;
+
+        font-family: "Libre Baskerville";
+        font-size: 34px;
+        font-weight: 400;
+        line-height: 110%;
+        text-transform: capitalize;
+        width: 316px;
+    }
+    .hero__subtitle {
+        color: var(--text-body-copy, #414840);
+        text-align: center;
+        font-family: 'Roboto';
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 150%;
+        width: 343px;
+    }
+}
+@media screen and (min-width:100px) and (max-width: 390px) {
+    .hero__title {
+        font-size: 28px;
+        width: 250px;
+    }
+
+    .hero__subtitle {
+        font-size: 14px;
+        width: 300px;
+    }
+
+    .hero__btn button {
+        padding: 10px 5px;
+        font-size: 12px;
+    }
+}
+/* section nature */
+
+.nature {
+    display: flex;
+    margin: 100px 0;
+    background-color: #343D33;
+    width: 100%;
+    padding: 100px 0;
+    justify-content: center;
+
+}
+
+.nature__img {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.nature__lil--image {
+    width: 535px;
+}
+
+.nature__big--image {
+    width: 1040px;
+}
+
+.nature__text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.nature__text--title {
+    width: 417px;
+    color: var(--white, #FFF);
+    font-family: "Libre Baskerville";
+    font-size: 45px;
+    font-weight: 400;
+    line-height: 110%;
+    text-transform: capitalize;
+}
+
+.nature__text--subtitle {
+    width: 401px;
+    color: var(--white, #FFF);
+    font-family: 'Roboto';
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.nature__text--button {
+    padding: 20px 40px;
+    border: 2px solid var(--white, #FFF);
+    color: var(--white, #FFF);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2.1px;
+    text-transform: uppercase;
+    background-color: unset;
+    cursor: pointer;
+}
+
+.nature__big--container {
+    display: flex;
+    gap: 90px;
+    align-items: center;
+}
+
+
+
+
+@media screen and (max-width: 767px) {
+    .nature__lil--image {
+        width: 340px;
+    }
+
+    .nature__big--image {
+        width: 340px;
+        order: -1;
+    }
+
+    .nature {
+        padding: 100px 20px;
+    }
+
+    .nature__text {
+        order: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .nature__big--container {
+        flex-direction: column;
+    }
+
+    .nature__text--title {
+        width: 344px;
+        color: var(--white, #FFF);
+        text-align: center;
+        font-family: "Libre Baskerville";
+        font-size: 34px;
+        font-weight: 400;
+        line-height: 110%;
+        text-transform: capitalize;
+    }
+
+    .nature__text--subtitle {
+        width: 344px;
+        color: var(--white, #FFF);
+        text-align: center;
+        font-family: 'Roboto';
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 150%;
+    }
+
+    .nature__text--button {
+        padding: 15px 30px;
+    }
+
+
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
+    .nature__big--image {
+        width: 1000px;
+    }
+
+    .nature__big--container {
+        gap: 30px;
+    }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .nature__lil--image {
+        width: 500px;
+    }
+
+
+    .nature {
+        padding: 100px 20px;
+        justify-content: flex-start;
+        padding-left: 100px;
+    }
+
+    .nature__text {
+        order: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .nature__big--container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nature__big--image {
+        width: 500px;
+        order: -1;
+    }
+}
+
+@media screen and (min-width:100px) and (max-width: 390px) {
+    .nature__big--image {
+        width: 130px;
+       margin-left: 20px;
+    }
+
+    .nature__text--title {
+        font-size: 20px;
+        width: 200px;
+        text-align: left;
+    }
+
+    .nature__text--subtitle {
+        font-size: 14px;
+        text-align: left;
+        width: 200px;
+    }
+
+    .nature__text {
+        align-items: flex-start;
+    }
+
+    .nature__lil--image {
+        width: 130px;
+        margin-right: 30px;
+    }
+
+    
+
+}
+
+
+/* section news */
+
+.news {
+    max-width: 1200px;
+    width: 100%;
+}
+
+.news__head {
+    margin-bottom: 50px;
+}
+
+.news__head--title {
+    color: var(--Header-text, #343D33);
+    font-family: "Libre Baskerville";
+    font-size: 45px;
+    font-weight: 400;
+    line-height: 110%;
+    text-transform: capitalize;
+}
+
+.plants {
+    display: flex;
+    gap: 50px;
+}
+
+.plants__text {
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+.plants__text--head {
+    color: var(--Primary, #475F45);
+    font-family: "Libre Baskerville";
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 110%;
+}
+
+.plants__text--body {
+    width: 471px;
+    height: 73px;
+    color: var(--text-body-copy, #414840);
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.plants__text--foot {
+    color: var(--Header-text, #343D33);
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+
+.plants__rightside--up {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.plants__rightside {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.plant__head {
+    color: var(--Primary, #475F45);
+    font-family: "Libre Baskerville";
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 110%;
+}
+
+.plant__body {
+    width: 354px;
+    color: var(--text-body-copy, #414840);
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+    margin: 10px 0;
+}
+
+.plant__foot {
+    color: var(--Header-text, #343D33);
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.middle__container {
+    border-top: 1px solid #C4C4C4;
+    border-bottom: 1px solid #C4C4C4;
+    max-width: 630px;
+    padding: 20px 0;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
+    .jungle__image {
+        width: 400px;
+    }
+
+    .plants__text--body {
+        font-size: 15px;
+        width: 370px;
+    }
+
+    .plant__body {
+        font-size: 14px;
+        width: 300px;
+    }
+
+    .plants {
+        gap: 30px;
+        justify-content: center;
+    }
+
+    .news {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    
+}
+
+@media screen and (max-width: 767px) {
+    .jungle__image {
+        width: 340px;
+    }
+
+    .plants {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+    }
+
+    .plants__text--body {
+        font-size: 14px;
+        width: 350px;
+    }
+
+    .plants__rightside--up {
+        flex-direction: column;
+    }
+
+    .news {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .jungle__image {
+        width: 390px;
+    }
+
+    .plants {
+        flex-direction: column;
+    }
+
+    .news {
+        justify-content: flex-start;
+        padding-left: 100px;
+    }
+
+}
+
+@media screen and (min-width:100px) and (max-width: 390px) {
+   
+    .news__head--title {
+        font-size: 25px;
+    }
+
+    .plants__text--body {
+        font-size: 13px;
+        width: 250px;
+    }
+
+    .jungle__image {
+        width: 280px;
+    }
+
+    .plant__body {
+        font-size: 13px;
+        width: 250px;
+    }
+
+    
+
+}
+
+/* footer */
+
+.footer__container {
+    width: 100%;
+    background-color: #414840;
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+
+}
+
+.content {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.content__firstside {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: flex-start;
+
+}
+
+.content__firstside--text {
+    color: var(--white, #FFF);
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+    width: 270px;
+}
+
+.content__middleside {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.content__middleside--header {
+    color: var(--white, #FFF);
+    text-align: left;
+    font-family: "Libre Baskerville";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 110%;
+    text-transform: capitalize;
+}
+
+.content__middleside--body {
+    color: var(--white, #FFF);
+    font-family: 'Roboto';
+    font-size: 14px;
+    font-weight: 400;
+    text-align: left;
+    display: flex;
+}
+
+
+.content__lastside {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.soc__container {
+    display: flex;
+    gap: 25px;
+}
+
+.soc__container--head {
+    color: var(--white, #FFF);
+    text-align: left;
+    font-family: "Libre Baskerville";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 110%;
+    text-transform: capitalize;
+}
+
+.footer__last--container {
+    background-color: #343D33;
+    color: white;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.footer__last--content {
+    display: flex;
+    justify-content: center;
+    color: var(--white, #FFF);
+    text-align: center;
+    font-family: 'Roboto';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+@media screen and (max-width: 767px) {
+    .content {
+        flex-direction: column;
+        align-items: center;
+        gap: 35px;
+
+    }
+
+    .content__firstside {
+        text-align: center;
+        color: var(--white, #FFF);
+        text-align: center;
+        font-family: 'Roboto';
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 150%;
+    }
+
+    .content__middleside {
+        align-items: center;
+    }
+
+    .content__lastside {
+        align-items: center;
+    }
+}
+
+
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+    .content {
+        justify-content: space-around;
+    }
+}
